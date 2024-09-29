@@ -22,11 +22,41 @@
             position: fixed;
             z-index: 1000;
             background-color: #ffffff;
+            transition: bottom; /* Smooth transition */
+        }
+
+        .header.hidden {
+            bottom: -500px; /* Move header out of view */
         }
 
         .header img {
             max-width: 120%;
             height: auto;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 20%; }
+        }
+
+        @keyframes erasing {
+            from { width: 20%; }
+            to { width: 0; }
+        }
+
+        .strip {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            text-align: right;
+            padding: 10px 0;
+            font-size: 30px;
+            font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            animation: typing 3s steps(30, end), erasing 3s steps(30, end) 3s;
         }
 
         /* Container */
@@ -54,6 +84,18 @@
             padding: 60px 20px;
             text-align: center;
         }
+
+        .section img {
+            max-width: 90%;
+            height: 100%;
+        }
+
+        .footer {
+            background-color: #ffffff;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -63,25 +105,52 @@
     <div class="container">
         <img src="experiments.jpg">
     </div>
+<!--    <div class="strip" id="strip">Initial content</div>-->
 </div>
 
 <!-- Section 1: Why Choose Us -->
 <div class="section" id="why">
     <div class="container">
-        <h2>Why Choose Our Product?</h2>
-        <p>We offer [Feature 1], [Feature 2], and [Feature 3] to solve your problem effectively and efficiently.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Another product feature">
+        <img src="features.jpg">
     </div>
 </div>
 
-<!-- Section 2: How It Works -->
-<div class="section" id="how">
-    <div class="container">
-        <h2>How It Works</h2>
-        <p>Our technology enables seamless real-time updates with minimal effort on your part. Learn more below.</p>
-        <img src="https://via.placeholder.com/800x400" alt="How it works">
-    </div>
-</div>
+<!--&lt;!&ndash; Section 2: How It Works &ndash;&gt;-->
+<!--<div class="section" id="how">-->
+<!--    <div class="container">-->
+<!--        <h2>How It Works</h2>-->
+<!--        <p>Our technology enables seamless real-time updates with minimal effort on your part. Learn more below.</p>-->
+<!--        <img src="https://via.placeholder.com/800x400" alt="How it works">-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--- Footer -->
+<footer class="footer">
+    <p>&copy; 2020 Celestial. All rights reserved.</p>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.header');
+        header.classList.add('hidden');
+    });
+
+    // Modify the existing JavaScript
+    const strip = document.getElementById('strip');
+    const messages = ['Only flow', 'Auto-managed', 'Message 3'];
+    let index = 0;
+
+    function typeAndErase() {
+        strip.style.animation = 'none';
+        strip.offsetHeight; // Trigger reflow
+        strip.style.animation = `typing 3s steps(30, end), erasing 3s steps(30, end) 3s`;
+        strip.textContent = messages[index];
+        index = (index + 1) % messages.length;
+    }
+
+    setInterval(typeAndErase, 6000); // Change content every 6 seconds (3s typing + 3s erasing)
+    typeAndErase(); // Initial call
+</script>
 
 </body>
 </html>
