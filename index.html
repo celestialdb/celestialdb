@@ -3,156 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: "Helvetica Neue", sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #323537;
-            line-height: 1.6;
-        }
-
-        /* Banner */
-        .banner {
-            background-color: #323537;
-            color: #FFFFFF;
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .banner .company-name {
-            font-weight: bold;
-            font-size: 1.8rem;
-        }
-        .banner nav a {
-            color: #FFFFFF;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: large;
-            font-weight: normal;
-        }
-        /*.banner nav a:hover {*/
-        /*    text-decoration: underline;*/
-        /*}*/
-
-        /* Container */
-        .container {
-            width: 100%;
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: #FFFFFF;
-            padding-top: 70px;
-            padding-bottom: 0px;
-            padding-left: 20px;
-            padding-right: 20px;
-            text-align: center;
-            margin-top: 10px; /* To account for the banner */
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .hero h2 {
-            font-weight: lighter;
-            font-size: 1.8rem;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-        .hero p {
-            font-size: 1.8rem;
-            color: #26282A;
-        }
-        .hero img {
-            width: 100%;
-            max-width: 600px;
-            margin-top: 20px;
-        }
-
-        /* Section */
-        .section {
-            padding-top: 40px;
-            padding-bottom: 0px;
-            padding-left: 20px;
-            padding-right: 20px;
-            text-align: center;
-        }
-        .section img {
-            width: 100%;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #323537;
-            color: #FFFFFF;
-            text-align: center;
-            font-size: 0.8rem;
-            padding: 10px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .column {
-            float: left;
-            width: 33%;
-            padding-left: 100px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-right: 10px;
-            text-align: center;
-        }
-
-        .column2 {
-            float: left;
-            width: 33%;
-            padding-left: 40px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-right: 40px;
-            text-align: center;
-        }
-
-        .column3 {
-            float: left;
-            width: 33%;
-            padding-left: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-right: 100px;
-            text-align: center;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 </head>
 <body>
 
 <!-- Banner Section -->
 <div class="banner">
-    <div class="company-name">celestial</div>
+    <div class="company-name">
+        <img src="images/logo_transparent.png" alt="Company Logo" class="company-logo">
+        celestial
+    </div>
     <nav>
-        <a href="https://github.com/celestialdb/celestial"><u>GitHub</u></a>
+        <a href="https://github.com/celestialdb/celestial" target="_blank"><u>GitHub</u></a>
     </nav>
 </div>
 
@@ -160,36 +25,161 @@
 <div class="hero">
     <div class="container">
         <h1><t style="background: #FFFFFF">Managed</t> <t style="color: #764abc">Redux Toolkit</t></h1>
-        <h2>Auto-generate your RTK definitions.</h2>
-        <h2>All the power of RTK, minus the hassle.</h2>
+        <p style="font-size: xxx-large;width: 75%;margin: auto;font-style: normal">Auto-generate your RTK definitions</p>
+        <h2>All the power of <t style="color: #764abc">Redux Toolkit</t>, only a click away</h2>
     </div>
 </div>
 
 <div class="row" style="font-size: large">
     <div class="column">
         <h3>Auto-generated RTK definitions</h3>
-        <p>Auto-generated query and mutation hooks for your backend with built-in caching and optimistic updates</p>
+        <p>Auto-generated query and mutation hooks for your backend with <t style="background: #b5e4eb">built-in caching and optimistic updates</t></p>
     </div>
     <div class="column2">
-        <h3>Simplified state management</h3>
-        <p>Structure your state however you want. Manipulate it simply by <t style="font-family: 'Courier'; background: #b5e4eb">updateCache(stateVar, 'val')</t></p>
+        <h3><u style="text-decoration: underline; text-decoration-color: red;text-decoration-style: wavy;"><i>Zero</i></u> boilerplate</h3>
+        <p>Supercharge your UI with advanced backend synchronization and state management patterns, <t style="background: #bcb5eb">for a seamless, snappy user experience</t></p>
     </div>
     <div class="column3">
-        <h3><i>Zero</i> boilerplate</h3>
-        <p>Deliver compelling user experiences without boilerplate and complexity slowing you down.</p>
+        <h3>State management simplified++</h3>
+        <p>Structure state however you want. Manipulate it simply by <t style="font-family: 'Courier'; background: #ebd7b5">`updateCache(stateVar, 'val')`</t></p>
+
+<!-- <p>Deliver compelling user experiences <t style="background: #bcb5eb">without boilerplate and complexity</t> slowing you down.</p> -->
     </div>
 </div>
 
-<!-- Section 2: How It Works -->
-<div class="section" id="how">
-    <div class="container">
-        <img src="./celestial_color.png" alt="celestial">
+<div class="container">
+    <div class="features">
+        <t>Open-source</t>
+        <t>Redux</t>
+        <t>Declarative</t>
+        <t>Typescript</t>
+        <t>Auto-managed</t>
+        <t>Unified state layer</t>
     </div>
+</div>
+
+<div class="container">
+<div class="codesamples">
+<div class="row" style="font-size: medium">
+    <div class="column1_2">
+<pre><code class="language-javascript">    // generated RTK definitions
+    import {
+        selectTasks, selectTasksById,
+        selectTasksIds, useGetTasksQuery,
+        usePostTasksMutation, useDeleteTaskMutation
+    } from "./tasksData";
+    import {
+        selectColors, selectColorsById,
+        selectColorsIds, useGetColorsQuery,
+    } from "./colorsData";
+</code></pre>
+    </div>
+    <div class="column1_2">
+        <div>
+        <p>Simply <t style="font-family: 'Courier'; background: lightgrey; font-style: normal">`npx celestial openAPI.json ./`</t> and get a comprehensive list of <b>query and mutation hooks tailored to your backend</b>.</p> <p>Celestial also generates <b>default selectors providing common operations</b> over the data fetched from the backend.</p>
+            <p>It is like using <b>a library written specifically for your backend APIs</b>. You just have to make function calls.</p>
+    </div></div>
+</div>
+
+<div class="row" style="font-size: medium">
+    <div class="column1_2">
+        <div>
+        <p>Declaratively injecting data into components: <b>call the query hook and use the suitable selector</b>.</p>
+        <p>Combine selectors to mould data into component suitable shape. Any change to source data will cascade down to derived data, ensuring a consistent UI experience.</p>
+    </div></div>
+    <div class="column1_2">
+        <pre><code class="language-javascript">    // call the hooks
+    useGetColorsQuery()
+    useGetTasksQuery()
+
+    // inject data
+    const todo = useSelector(selectTasksById(id))
+    const allColors = useSelector(selectColors)
+</code></pre>
+    </div>
+</div>
+
+<div class="row" style="font-size: medium">
+    <div class="column1_2">
+        <pre><code class="language-javascript">    // initialize mutation hook
+    const [ addTask ] = usePostTasksMutation()
+
+    // this will issue a POST on /tasks endpoint
+    addTask({newTask: {text: "my new todo"}})
+</code></pre>
+    </div>
+    <div class="column1_2">
+        <div>
+        <p>Updates are just as straight forward: just call the mutation hook with the usual arguments. All updates are optimistic
+        by default.</p>
+            <p>Optimistic updates reflect in all components using the data, including derived data.</p>
+    </div></div>
+</div>
+
+<div class="row" style="font-size: medium">
+    <div class="column1_2">
+        <div>
+        <p>Celestial abstracts away all details of local state management, exposing intuitive hooks to make local state management as easy as making function calls.</p>
+        <p> Some thing here</p>
+        </div>
+    </div>
+    <div class="column1_2">
+        <pre><code class="language-javascript">    // initialize cache to manage local state
+    useCacheInit("status",
+        { All: 'all', Active: 3, Completed: 1,});
+
+    // update cache
+    const onStatusChange = (status) => {
+        cacheUpdate("status", status)
+    }
+</code></pre>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="container">
+    <p style="font-size: xx-large">celestial simplifies all aspects of frontend state management. You can focus on developing your UI, without worrying about backend wiring.</p><p style="font-size: xx-large">Try out these examples:</p>
+    <div class="row">
+    <div class="column" style="padding-left: 10px;">
+        <div class="examples">
+            <a href="https://github.com/celestialdb/celestial/tree/main/examples/todoApp" target="_blank">
+                <h2>A todo App</h2>
+            </a>
+            <a href="https://github.com/celestialdb/celestial/tree/main/examples/todoApp" target="_blank">
+                <img style="width: 100%;" src="images/todo_app.png">
+            </a>
+        </div>
+    </div>
+
+    <div class="column2">
+        <div class="examples">
+            <a href="https://github.com/celestialdb/celestial/tree/main/examples/jira_clone" target="_blank">
+                <h2>Jira Clone</h2>
+            </a>
+            <a href="https://github.com/celestialdb/celestial/tree/main/examples/jira_clone" target="_blank">
+                <img style="width: 100%;" src="images/jira_clone.png">
+            </a>
+        </div>
+    </div>
+    <div class="column3" style="padding-right: 10px;">
+        <div class="examples">
+            <a href="https://github.com/celestialdb/celestial/tree/main/examples/shopping_cart" target="_blank">
+                <h2>Shopping Cart</h2>
+            </a>
+            <a href="https://github.com/celestialdb/celestial/tree/main/examples/shopping_cart" target="_blank">
+                <img style="width: 100%;" src="images/shopping_cart.png">
+            </a>
+        </div>
+    </div>
+</div>
+</div>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-        <p>&copy; 2024 Celestial. All rights reserved.</p>
+        <p>&copy; 2024 Celestial Labs Inc. All rights reserved.</p>
 </div>
 
 </body>
