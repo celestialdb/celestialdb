@@ -1,0 +1,217 @@
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #323537;
+    line-height: 1.6;
+}
+
+/* Add this CSS to style the company logo */
+.company-logo {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 5px; /* Space between the logo and the company name */
+    vertical-align: middle; /* Align the logo vertically with the text */
+}
+
+/* Banner */
+.banner {
+    background-color: #e8b5a9; /*#EDC6BD;*/
+    color: #323537;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.banner .company-name {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.banner nav a {
+    color: #323537;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: large;
+    font-weight: normal;
+}
+/*.banner nav a:hover {*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/* Container */
+.container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #FFFFFF;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    margin-top: 10px; /* To account for the banner */
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero h2 {
+    font-weight: lighter;
+    font-size: 1.8rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.hero p {
+    font-weight: lighter;
+    font-size: 2rem;
+    color: #26282A;
+}
+.hero img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Section */
+.section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.section img {
+    width: 100%;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+
+/* Footer */
+.footer {
+    background-color: #323537;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: lighter;
+    padding: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.examples {
+}
+
+.examples a {
+    text-decoration: none;
+    color: #323537;
+}
+
+.examples img {
+    border: 2px solid #323537; /* Black border with 2px width */
+    padding: 10px; /* Optional: Add padding inside the border */
+    margin: 10px; /* Optional: Add margin outside the border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    margin-top: 0px
+}
+
+.column {
+    float: left;
+    width: 33%;
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.column2 {
+    float: left;
+    width: 33%;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+.column3 {
+    float: left;
+    width: 33%;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 100px;
+    text-align: center;
+}
+
+.column1_2 {
+    float: left;
+    width: 50%;
+    text-align: start;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+li {
+    margin: 10px 0;
+}
+
+
+.codesamples {
+    align-content: center;
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #f9f9f9;
+}
+
+.codesamples pre {
+    border-radius: 10px;
+    white-space: pre-wrap; /* Ensures lines wrap */
+    word-break: break-word; /* Breaks long words */
+}
+
+.codesamples p {
+    font-size: medium;
+    font-style: italic;
+    text-align: center;
+}
+
+.features {
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.features t {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #EDC6BD;
+    border-radius: 10px;
+    background-color: #fdf7f6;
+    color: #323537; /* Text color */
+    font-size: 1rem; /* Adjust the font size as needed */
+}
