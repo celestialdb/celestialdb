@@ -25,25 +25,24 @@
 <div class="hero">
     <div class="container">
         <h1><t style="background: #FFFFFF">Managed</t> <t style="color: #764abc">Redux Toolkit</t></h1>
-        <p style="font-size: xxx-large;width: 75%;margin: auto;font-style: normal">Auto-generate your RTK definitions</p>
-        <h2>All the power of <t style="color: #764abc">Redux Toolkit</t>, only a click away</h2>
+        <p style="font-size: xxx-large;width: 75%;margin: auto;font-style: normal">Auto-generate your <t style="color: #764abc">Redux Toolkit</t> code</p>
+        <h2>A library written specifically for your application, without you having to write it.</h2>
     </div>
 </div>
 
 <div class="row" style="font-size: large">
     <div class="column">
         <h3>Auto-generated RTK definitions</h3>
-        <p>Auto-generated query and mutation hooks for your backend with <t style="background: #b5e4eb">built-in caching and optimistic updates</t></p>
+        <p>Query and mutation hooks to interact with your backend with <t style="background: #b5e4eb">built-in caching and optimistic updates</t></p>
     </div>
     <div class="column2">
-        <h3><u style="text-decoration: underline; text-decoration-color: red;text-decoration-style: wavy;"><i>Zero</i></u> boilerplate</h3>
-        <p>Supercharge your UI with advanced backend synchronization and state management patterns, <t style="background: #bcb5eb">for a seamless, snappy user-experience</t></p>
+        <h3>State management simplified++</h3>
+        <p>Advanced backend synchronization and UI state management patterns out-of-the box <t style="background: #bcb5eb">minus the usual learning curve</t></p>
     </div>
     <div class="column3">
-        <h3>State management simplified++</h3>
-        <p>Structure state however you want. Manipulate it simply by <t style="font-family: 'Courier'; background: #ebd7b5">`updateCache(stateVar, 'val')`</t></p>
+        <h3><u class="red_underline"><i>Zero</i></u> boilerplate</h3>
+        <p>Intuitive API over custom written code requiring minimal configuration <t style="background: #ebd7b5">for quick start-up and smooth DevEx</t></p>
 
-<!-- <p>Deliver compelling user experiences <t style="background: #bcb5eb">without boilerplate and complexity</t> slowing you down.</p> -->
     </div>
 </div>
 
@@ -76,17 +75,19 @@
     </div>
     <div class="column1_2">
         <div>
-        <p>Simply <t style="font-family: 'Courier'; background: lightgrey; font-style: normal">`npx celestial openAPI.json ./`</t> and get a comprehensive list of <b>query and mutation hooks tailored to your backend</b>.</p> <p>Celestial also generates <b>default selectors providing common operations</b> over the data fetched from the backend.</p>
-            <p>It is like using <b>a library written specifically for your backend APIs</b>. You just have to make function calls.</p>
+            <ul>
+        <li>Simply <t class="inline_code_style">`npx celestial openAPI.json ./`</t> and get a comprehensive list of <b>query and mutation hooks tailored to your backend</b>.</li> <li>Celestial also generates <b>default selectors providing common operations</b> over the data fetched from the backend.</li>
+            <li>It is like using a module encapsulating your backend interaction, <b><u class="red_underline">without having to write it yourself!</u></b></li></ul>
     </div></div>
 </div>
 
 <div class="row" style="font-size: medium">
     <div class="column1_2">
-        <div>
-        <p>Declaratively inject data into components: <b>call the query hook and use the suitable selector</b>.</p>
-        <p>Combine selectors to mould data into component suitable shape. Any change to source data will cascade down to derived data, ensuring a consistent UI experience.</p>
-    </div></div>
+        <ul>
+        <li>Injecting data into components is declarative: <b>simply call the provided query hook and then the suitable selector</b>.</li>
+        <li>The various nuances of data fetching such as <b>loading & error states, normalization, duplicate requests, request cancellation</b> are handled automatically.</li>
+        <li>The fetched data is cached and used to serve subsequent requests for the data,<b><u class="red_underline"> enhancing performance of the UI</u></b>.</li>
+    </ul></div>
     <div class="column1_2">
         <pre><code class="language-javascript">    // call the hooks
     useGetColorsQuery()
@@ -109,19 +110,20 @@
 </code></pre>
     </div>
     <div class="column1_2">
-        <div>
-        <p>Updates are just as straight forward: just call the mutation hook with the usual arguments. All updates are optimistic
-        by default.</p>
-            <p>Optimistic updates reflect in all components using the data, including derived data.</p>
-    </div></div>
+        <ul>
+        <li>Updates are just as straightforward: <b>just call the provided mutation hook with the usual arguments</b>.</li>
+        <li>Updates are optimistic by default, <b><u class="red_underline">reflecting in all components instantaneously</u></b>, enabling a snappy user experience.</li>
+<!--        <li>Error handling and subsequent rollback are handled automatically, also reflecting instantaneously, including cascading down into derived data.</li>-->
+    </ul></div>
 </div>
 
 <div class="row" style="font-size: medium">
     <div class="column1_2">
-        <div>
-        <p>Celestial abstracts away all details of local state management, exposing intuitive hooks to make local state management as easy as making function calls.</p>
-        <p></p>
-        </div>
+        <ul>
+        <li>Celestial abstracts away all details of frontend state management, making local state management <b>as intuitive as manipulating an in-memory map</b>.</li>
+        <li>Initialize state with <t class="inline_code_style">`useCacheInit`</t>, access stored state anywhere with <t class="inline_code_style">`selectCache`</t>, update state with <t class="inline_code_style">`useCacheUpdate`</t>. <b><u class="red_underline">No bars on how, when and where to update state</u></b>.</li>
+        <li><b>All the benefits of Redux</b> but with a simple, intuitive API.</li>
+        </ul>
     </div>
     <div class="column1_2">
         <pre><code class="language-javascript">    // initialize cache to manage local state
@@ -141,8 +143,7 @@
 <div class="section">
 <div class="container">
     <div style="font-size: x-large;">
-    <br>We do all your backend wiring for you, providing advanced backend sychronization and state management primitives out-of-the-box.</br>
-        You get a hassle-free dev experience, and a seamless and snappy UX.</br> We simplify all aspects of frontend state management, allowing you to focus on your UI.</p>
+    <p>We write the backend wiring code for your frontend. You get simple-to-use hooks,</br>which implement advanced state management patterns to supercharge your frontend.</p>
     <p>Try it out yourself:</p>
     </div>
     <div class="row" style="margin-top: 0px">

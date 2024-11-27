@@ -215,3 +215,15 @@ li {
     color: #323537; /* Text color */
     font-size: 1rem; /* Adjust the font size as needed */
 }
+
+.inline_code_style {
+    font-family: 'Courier', serif ;
+    background: lightgrey;
+    font-style: normal
+}
+
+.red_underline {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-style: wavy;
+}
